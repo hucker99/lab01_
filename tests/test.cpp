@@ -22,7 +22,7 @@ Json object("{\n"
                    "    \t\"city\" : \"Moscow\",\n"
                    "        \"street\" : \"Vozdvijenka\"\n"
                    "    }\n"
-                   "}";
+                   "}");
 //Json object = Json::parse(json);
 EXPECT_EQ(std::any_cast<std::string>(object["lastname"]),
 "Ivanov");
