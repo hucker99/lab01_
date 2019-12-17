@@ -127,7 +127,7 @@ Json::parse_object(const std::string &str, size_t &pos) {
                 state = Act::find_comma_or_end;
             }
         } else if (str[i] == '}') {
-            if (state !== Act::find_colon) {
+            if (state != Act::find_colon) {
                 pos = i;
                 return res;
             }
