@@ -21,7 +21,7 @@ private:
 
     int parse_number(const std::string &number, size_t &pos) const;
 
-    bool parse_bool(const std::string b, size_t &pos) const;
+    bool parse_bool(const std::string b, size_t &pos);
 
     std::string parse_string(const std::string str, size_t &pos) const;
 
@@ -61,7 +61,7 @@ public:
             auto &data =
                     std::any_cast<std::map<std::string, std::any> &>(_data);
             return data[key];
-        } else{
+        } else {
             throw std::bad_any_cast();
         }
     }
